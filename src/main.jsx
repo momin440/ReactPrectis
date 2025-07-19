@@ -5,9 +5,9 @@ import App from './App'
 import Clock from './Clock'
 import ApiData from './Apidata'
 import "./App.css";
-import Form from '../Form'
+import Form from './Form'
 import Important from './Important'
-import Sample from '../sample'
+import Sample from './Sample'
 
 
 createRoot(document.getElementById('root')).render(

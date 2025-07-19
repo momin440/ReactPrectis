@@ -19,8 +19,8 @@ const Sample = () => {
   }
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen bg-gradient-to-br from-blue-900 to-slate-950">
-      <div className="bg-white rounded-lg shadow-lg p-8 w-full max-w-md">
+    <div className=" flex flex-col items-center justify-center min-h-screen bg-gradient-to-br from-blue-900 to-slate-950">
+      <div className="mt-24 bg-white rounded-lg shadow-lg p-8 w-full max-w-md">
         <h2 className="text-2xl font-bold mb-4 text-gray-800">Enter Username</h2>
         <input
           type="text"
