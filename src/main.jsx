@@ -7,6 +7,7 @@ import ApiData from './Apidata'
 import "./App.css";
 import Form from '../Form'
 import Important from './Important'
+import Sample from '../sample'
 
 
 createRoot(document.getElementById('root')).render(
@@ -16,5 +17,7 @@ createRoot(document.getElementById('root')).render(
   <ApiData />
   <Form />
   <Important />
+  <Sample />
+ 
   </StrictMode>,
 )
