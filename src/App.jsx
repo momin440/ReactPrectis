@@ -1,62 +1,37 @@
-import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
+import React from "react";
 import "./App.css";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Navbar from "./Navbar";
+import Welcome from "./Welcome";
+import UseId from "./UseId";
+import Clock from "./Clock";
+import Form from "./Form";
+import Sample from "./Sample";
+import Important from "./Important";
 import User from "./User";
+import ScrollReveal from "./ScrollReveal";
+import Apidata from "./Apidata";
+import GetApi from "./GetApi";
 
 function App() {
-  const name = "Mohammad Husain";
-  const displayName = name ? name : "Guest";
-  const role = "admin";
-
-  const message =
-    role === "admin"
-      ? "Welcome Admin"
-      : role === "user"
-      ? "Welcome User"
-      : "Welcome Guest";
-
-  const [count, setCount] = useState(0);
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-100 to-blue-50 flex flex-col items-center justify-center p-8">
-      <h1 className="text-5xl font-extrabold text-blue-700 mb-6 drop-shadow-md text-center">
-        Welcome to My React App
-      </h1>
-
-      <h4 className="text-lg text-gray-700 mb-2">
-        Current User:{" "}
-        <span className="font-semibold text-black">{displayName}</span>
-      </h4>
-
-      <h4 className="text-2xl font-bold text-green-600 mb-6">{message}</h4>
-
-      <div className="text-4xl font-bold text-gray-800 mb-6 drop-shadow-sm">
-        Count: <span className="text-blue-600">{count}</span>
-      </div>
-
-      <div className="flex gap-6 mb-8">
-        <button
-          type="button"
-          className="bg-gradient-to-r from-blue-500 to-blue-700 text-white px-6 py-3 rounded-xl shadow-md hover:scale-105 hover:shadow-lg transition-transform duration-300"
-          onClick={() => setCount(count + 1)}
-        >
-          +
-        </button>
-
-        <button
-          type="button"
-          className="bg-gradient-to-r from-red-500 to-red-700 text-white px-6 py-3 rounded-xl shadow-md hover:scale-105 hover:shadow-lg transition-transform duration-300"
-          onClick={() => setCount(count - 1)}
-        >
-          -
-        </button>
-      </div>
-
-      {/* User Component */}
-      <div className="text-lg font-medium text-gray-800 inline-flex items-center gap-2">
-        props: <User name="Mohsin" />
-      </div>
-    </div>
+    <>
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<Welcome />} />
+        <Route path="/use-id" element={<UseId />} />
+        <Route path="/scroll" element={<ScrollReveal />} />
+        <Route path="/clock" element={<Clock />} />
+        <Route path="/form" element={<Form />} />
+        <Route path="/apidata" element={<Apidata />} />
+        <Route path="/sample" element={<Sample />} />
+        <Route path="/important" element={<Important />} />
+        <Route path="/user" element={<User />} />
+        <Route path="/getapi" element={<GetApi />} />
+        <Route path="*" element={<h1>404 Not Found</h1>} />
+      </Routes>
+</>
   );
 }
+
 export default App;
