@@ -25,8 +25,8 @@ const ApiData = () => {
 
   return (
     <div className="p-8 max-w-3xl mx-auto">
-      <h2 className="text-3xl font-bold mb-6 text-center text-blue-600">API Data</h2>
-
+      <h2 className="text-3xl font-bold mb-6 text-center text-blue-600">API Data BY Mohammad</h2>
+      
       <div className="flex justify-center mb-8">
         <button
           onClick={get}
