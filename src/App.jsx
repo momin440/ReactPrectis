@@ -12,6 +12,10 @@ import User from "./User";
 import ScrollReveal from "./ScrollReveal";
 import Apidata from "./Apidata";
 import GetApi from "./GetApi";
+import UserApiList from "./UserApiList";
+import UserApiAdd from "./UserApiAdd";
+import UserApiEdit from "./UserApiEdit";
+import Chatgpt from "./Chatgpt";
 
 function App() {
   return (
@@ -28,6 +32,10 @@ function App() {
         <Route path="/important" element={<Important />} />
         <Route path="/user" element={<User />} />
         <Route path="/getapi" element={<GetApi />} />
+        <Route path="/fullapi" element={<UserApiList />} />
+        <Route path="/adduser" element={<UserApiAdd />} />
+        <Route path="/edituser/:id" element={<UserApiEdit />} />
+        <Route path="/chatgpt" element={<Chatgpt />} />
         <Route path="*" element={<h1>404 Not Found</h1>} />
       </Routes>
 </>
